@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kisan Alert – AI Smart Farming Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="back" data-tab="home" aria-label="Back to home">←</button>
+  <a class="brand" href="#home" data-tab="home">
+    <span class="logo">🌿</span>
+    <span><strong>Kisan Alert</strong><small>AI Powered Smart Farming Assistant</small></span>
+  </a>
+  <nav id="nav">
+    <button data-tab="home" class="active">Home</button>
+    <button data-tab="diagnosis">Diagnosis</button>
+    <button data-tab="image">Image</button>
+    <button data-tab="soil">Soil</button>
+    <button data-tab="advisory">Advisory</button>
+    <button data-tab="voice">Voice</button>
+  </nav>
+  <div class="top-right">
+    <select id="globalLang" aria-label="Language">
+      <option value="en">English</option>
+    </select>
+  </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+<!-- HOME -->
+<section id="home" class="tab active">
+
+  <div class="hero2">
+    <div class="hero2-text">
+      <h1>Empowering Every Farmer with Intelligent Care</h1>
+      <p>Instant AI diagnosis, soil analysis, and real-time weather alerts in your language.</p>
+      <button class="btn-lime" data-tab="diagnosis">Explore Features 🌱</button>
+    </div>
+    <div class="orbit" aria-hidden="true">
+      <div class="ring"></div>
+      <div class="orb o-ai">🌿<b>AI</b></div>
+      <div class="orb o-sun">⛅</div>
+      <div class="orb o-soil">🧪</div>
+    </div>
+  </div>
+
+  <div class="tiles">
+    <button class="tile wide" data-tab="diagnosis">
+      <span class="ti">🌱</span>
+      <span class="tt"><b>Crop Diagnosis</b><small>Describe symptoms and get AI diagnosis</small></span>
+      <em>🌿</em>
+    </button>
+    <button class="tile wide" data-tab="image">
+      <span class="ti">📷</span>
+      <span class="tt"><b>Image Diagnosis</b><small>Upload crop images for instant analysis</small></span>
+      <em>📸</em>
+    </button>
+    <button class="tile" data-tab="soil">
+      <span class="ti">🔬</span>
+      <span class="tt"><b>Soil Analysis</b><small>Extract soil health data from soil cards</small></span>
+    </button>
+    <button class="tile" data-tab="advisory">
+      <span class="ti">🌾</span>
+      <span class="tt"><b>Farm Advisory</b><small>Get weather-aware farming recommendations</small></span>
+    </button>
+    <button class="tile" data-tab="voice">
+      <span class="ti">🎙️</span>
+      <span class="tt"><b>Voice Assistant</b><small>Talk to Kisan Alert in Telugu and more</small></span>
+    </button>
+  </div>
+
+  <div class="statbar">
+    <div class="widget w-chart">
+      <small>Real-time Field Insights</small>
+      <svg viewBox="0 0 120 50" aria-hidden="true">
+        <polyline points="0,40 15,32 30,36 45,18 60,26 75,12 90,24 105,16 120,22" fill="none" stroke="#2e7d3e" stroke-width="2"/>
+        <polyline points="0,44 15,40 30,42 45,30 60,34 75,26 90,32 105,28 120,30" fill="none" stroke="#d9a520" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="widget w-voice">
+      <small>Multilingual Voice Support Demo</small>
+      <div class="wave" aria-hidden="true">
+        <i style="height:30%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:50%"></i>
+        <i style="height:75%"></i><i style="height:35%"></i><i style="height:85%"></i><i style="height:55%"></i>
+        <i style="height:40%"></i><i style="height:70%"></i><i style="height:30%"></i><i style="height:60%"></i>
+      </div>
+      <button class="play" data-tab="voice" aria-label="Open voice assistant">▶</button>
+    </div>
+
+    <div class="stat"><div class="row"><b>95%</b><span class="meter"><i style="width:95%"></i></span></div><small>Diagnosis Accuracy</small></div>
+    <div class="stat"><div class="row"><b>5+</b><span class="meter"><i style="width:55%"></i></span></div><small>Languages Supported</small></div>
+    <div class="stat"><div class="row"><b>24/7</b></div><small>Available</small></div>
+  </div>
+
+  <footer class="home-foot">
+    <nav>
+      <a href="#">Contact Us</a><span>|</span><a href="#">About Us</a><span>|</span>
+      <a href="#">Privacy Policy</a><span>|</span><a href="#">Terms of Use</a><span>|</span><a href="#">Join Our Team</a>
+    </nav>
+    <em>“Smarter Farming, Brighter Tomorrows”</em>
+  </footer>
+
+</section>
+
+<!-- CROP DIAGNOSIS -->
+<section id="diagnosis" class="tab">
+  <div class="split">
+    <div class="panel">
+      <h2>🌱 Crop Diagnosis</h2>
+      <p class="sub">Describe the symptoms of your crop problem</p>
+      <textarea id="symptoms" rows="6" placeholder="Enter crop symptoms... (e.g. yellow leaves, spots, wilting, pests, etc.)"></textarea>
+      <label for="diagLang">Select Language</label>
+      <select id="diagLang">
+        <option value="en">English (EN)</option>
+        <option value="te">తెలుగు (TE)</option>
+        <option value="hi">हिन्दी (HI)</option>
+      </select>
+      <button class="btn btn-primary" id="diagBtn">Diagnose Now</button>
+    </div>
+    <div class="panel result" id="diagResult">
+      <div class="empty">Your diagnosis will appear here.</div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE DIAGNOSIS -->
+<section id="image" class="tab">
+  <h2>📷 Image Based Diagnosis</h2>
+  <p class="sub">Upload a photo of your crop to get instant AI analysis</p>
+  <div class="split">
+    <div class="panel">
+      <div class="dropzone" id="imgDrop">
+        <div class="cloud">☁️</div>
+        <p>Drag &amp; drop an image here</p><span class="or">or</span>
+        <button class="btn btn-blue" type="button" id="imgChoose">Choose File</button>
+        <small>Supports: JPG, PNG (Max 5MB)</small>
+        <input type="file" id="imgInput" accept="image/png,image/jpeg" hidden>
+      </div>
+      <img id="imgPreview" class="preview" alt="Uploaded crop" hidden>
+      <button class="btn btn-primary" id="imgBtn" disabled>Analyse Image</button>
+    </div>
+    <div class="panel result" id="imgResult"><div class="empty">Upload a photo to see the result.</div></div>
+  </div>
+</section>
+
+<!-- SOIL -->
+<section id="soil" class="tab">
+  <h2>🪴 Soil Health Analysis</h2>
+  <p class="sub">Upload your soil health card to extract key soil parameters</p>
+  <div class="split">
+    <div class="panel">
+      <div class="dropzone" id="soilDrop">
+        <div class="cloud">☁️</div>
+        <p>Drag &amp; drop soil card image here</p><span class="or">or</span>
+        <button class="btn btn-blue" type="button" id="soilChoose">Choose File</button>
+        <small>Supports: JPG, PNG (Max 5MB)</small>
+        <input type="file" id="soilInput" accept="image/png,image/jpeg" hidden>
+      </div>
+      <img id="soilPreview" class="preview" alt="Soil card" hidden>
+      <button class="btn btn-primary" id="soilBtn" disabled>Extract Parameters</button>
+    </div>
+    <div class="panel" id="soilResult"><div class="empty">Extracted soil parameters will appear here.</div></div>
+  </div>
+</section>
+
+<!-- ADVISORY -->
+<section id="advisory" class="tab">
+  <h2>🌾 Farm Advisory</h2>
+  <p class="sub">Get personalized farming recommendations based on weather, soil and location</p>
+  <div class="split advisory">
+    <div class="panel">
+      <label for="advCrop">Crop</label>
+      <select id="advCrop">
+        <option>Tomato</option><option>Rice</option><option>Cotton</option>
+        <option>Chilli</option><option>Maize</option><option>Groundnut</option>
+      </select>
+      <label for="advLoc">Location</label>
+      <input id="advLoc" type="text" value="Visakhapatnam">
+      <label for="advLang">Language</label>
+      <select id="advLang">
+        <option value="en">English (EN)</option>
+        <option value="te">తెలుగు (TE)</option>
+        <option value="hi">हिन्दी (HI)</option>
+      </select>
+      <button class="btn btn-primary" id="advBtn">Generate Advisory</button>
+    </div>
+    <div class="panel" id="advResult"><div class="empty">Your advisory will appear here.</div></div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section id="voice" class="tab">
+  <h2>🎙️ Voice Assistant</h2>
+  <p class="sub">Talk to Kisan Alert in your language</p>
+  <div class="split">
+    <div class="panel mic-panel">
+      <button class="mic" id="micBtn" aria-label="Start listening">🎤</button>
+      <b id="micLabel">Click to Start Listening</b>
+      <small>Speak in Telugu, English, Hindi or your preferred language</small>
+      <div id="voiceOut" class="voice-out"></div>
+    </div>
+    <div>
+      <div class="panel">
+        <h3>How it works</h3>
+        <ol class="steps">
+          <li>Click the microphone and speak about your crop problem</li>
+          <li>Your speech is converted to text</li>
+          <li>AI analyzes and gives recommendations</li>
+          <li>You hear the response in your language</li>
+        </ol>
+      </div>
+      <div class="panel">
+        <h3>Supported Languages</h3>
+        <div class="chips">
+          <button class="chip active" data-vlang="te-IN">తెలుగు</button>
+          <button class="chip" data-vlang="en-IN">English</button>
+          <button class="chip" data-vlang="hi-IN">हिन्दी</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="toast" role="status"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
