@@ -1,0 +1,56 @@
+{
+  "document_type": "Soil Health Card",
+  "farmer_name": "Ramesh Babu",
+  "location": "Pedda Gudem, Anakapalle, Visakhapatnam, Andhra Pradesh",
+  "crop": "Tomato",
+  "soil_parameters": {
+    "ph": {
+      "value": "6.5",
+      "unit": "-"
+    },
+    "electrical_conductivity": {
+      "value": "0.42",
+      "unit": "dS/m"
+    },
+    "organic_carbon": {
+      "value": "0.58",
+      "unit": "%"
+    },
+    "nitrogen": {
+      "value": "280",
+      "unit": "kg/ha"
+    },
+    "phosphorus": {
+      "value": "12.5",
+      "unit": "kg/ha"
+    },
+    "potassium": {
+      "value": "325",
+      "unit": "kg/ha"
+    },
+    "sulphur": {
+      "value": "18.6",
+      "unit": "kg/ha"
+    },
+    "zinc": {
+      "value": "0.72",
+      "unit": "mg/kg"
+    },
+    "iron": {
+      "value": "6.8",
+      "unit": "mg/kg"
+    },
+    "manganese": {
+      "value": "4.2",
+      "unit": "mg/kg"
+    },
+    "copper": {
+      "value": "0.68",
+      "unit": "mg/kg"
+    },
+    "boron": {
+      "value": "0.45",
+      "unit": "mg/kg"
+    }
+  }
+}
