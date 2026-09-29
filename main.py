@@ -21,7 +21,7 @@ from validation import (
     validate_place,
     validate_language
 )
-
+from flask import render_template
 
 # --------------------------------------------------
 # CONFIGURATION
@@ -46,7 +46,9 @@ client = genai.Client(
 def home():
     return "Kisan Alert Backend is Running!"
 
-
+@app.route("/")
+def home():
+    return render_template("index.html")
 # --------------------------------------------------
 # TEXT CROP DIAGNOSIS
 # --------------------------------------------------
@@ -1257,7 +1259,5 @@ def internal_server_error(error):
 import os
 
 if __name__ == "__main__":
-    app.run(
-        host="0.0.0.0",
-        port=int(os.environ.get("PORT", 5001))
-    )
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
